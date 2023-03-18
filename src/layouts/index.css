@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .main-heading-dark {
+    color: transparent;
+    -webkit-text-stroke-width: 5px;
+ 	-webkit-text-stroke-color: #F56900;
+  }
+
+  .main-heading-light {
+    color: transparent;
+    -webkit-text-stroke-width: 5px;
+ 	-webkit-text-stroke-color: #181616;
+  }
+}

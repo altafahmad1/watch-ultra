@@ -1,8 +1,10 @@
 ---
+import Header from '../components/Header';
 import Main from '../components/Main';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Watch Ultra'>
-	<Main />
+	<Header />
+	<Main client:load />
 </Layout>

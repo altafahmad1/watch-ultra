@@ -5,13 +5,13 @@
 @layer utilities {
   .main-heading-dark {
     color: transparent;
-    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-width: 3px;
  	-webkit-text-stroke-color: #F56900;
   }
 
   .main-heading-light {
     color: transparent;
-    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-width: 3px;
  	-webkit-text-stroke-color: #181616;
   }
 }

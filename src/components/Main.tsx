@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import ColorCard from './ColorCard';
 
 export default function Main() {
 	const headingRef = useRef<HTMLHeadingElement>(null);
@@ -6,14 +7,15 @@ export default function Main() {
 	const imageRef = useRef<HTMLImageElement>(null);
 	const backBtnRef = useRef<HTMLButtonElement>(null);
 	const customizeBtnRef = useRef<HTMLButtonElement>(null);
+	const cardRef = useRef<HTMLDivElement>(null);
 
 	const moveMainImage = () => {
-		imageRef.current?.classList.remove('left-0', 'right-0', 'top-[50%]');
-		imageRef.current?.classList.add('left-0', 'right-[500px]', 'top-[70%]');
+		imageRef.current?.classList.remove('left-0', 'right-0');
+		imageRef.current?.classList.add('left-0', 'right-[500px]');
 	};
 	const resetMainImage = () => {
-		imageRef.current?.classList.remove('left-0', 'right-[500px]', 'top-[70%]');
-		imageRef.current?.classList.add('left-0', 'right-0', 'top-[50%]');
+		imageRef.current?.classList.remove('left-0', 'right-[500px]');
+		imageRef.current?.classList.add('left-0', 'right-0');
 	};
 
 	const toggleCustomize = () => {
@@ -24,10 +26,16 @@ export default function Main() {
 		backBtnRef.current?.classList.toggle('opacity-0');
 		customizeBtnRef.current?.classList.toggle('opacity-100');
 		customizeBtnRef.current?.classList.toggle('opacity-0');
+		cardRef.current?.classList.toggle('opacity-100');
+		cardRef.current?.classList.toggle('opacity-0');
 	};
 
 	return (
 		<main className='relative flex flex-col h-[calc(100vh-75px)] items-center justify-center'>
+			<ColorCard
+				innerRef={cardRef}
+				className='absolute right-[10%] top-[10%]'
+			/>
 			<button
 				onClick={() => {
 					toggleCustomize();
